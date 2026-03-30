@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mountain Meadows Links</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDEN16QSD9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NDEN16QSD9');
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f5132, #198754);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      padding: 40px 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      opacity: 0.95;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      max-width: 340px;
+      padding: 16px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .instagram {
+      background: #ffffff;
+      color: #198754;
+    }
+
+    .reviews {
+      background: #ffd54f;
+      color: #222;
+    }
+
+    .small {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>You are that much closer to a $1 beer 🍺</h1>
+    <p>Follow us on Instagram and leave us a review.</p>
+
+    <div class="buttons">
+      <a
+        class="btn instagram"
+        href="https://www.instagram.com/mountainmeadowsgc?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="trackClick('Instagram Button', 'Instagram')"
+      >
+        Visit Mountain Meadows Instagram
+      </a>
+
+      <a
+        class="btn reviews"
+        href="https://www.google.com/search?q=mountain+meadows+google+reviews&rlz=1C5BAPC_enUS1176"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="trackClick('Reviews Button', 'Google Reviews')"
+      >
+        Visit Mountain Meadows Reviews
+      </a>
+    </div>
+
+    <div class="small">
+      Mountain Meadows Golf Course
+    </div>
+  </div>
+
+  <script>
+    function trackClick(buttonName, destination) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click', {
+          event_category: 'Button',
+          event_label: buttonName,
+          destination: destination
+        });
+      }
+    }
+  </script>
+</body>
+</html>
